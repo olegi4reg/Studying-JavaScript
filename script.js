@@ -1,32 +1,62 @@
 'use strict';
 
-var string = `Hello
-!`;
 
-console.log(string);
+let money = prompt("Ваш бюджет на месяц?", "777"),
+    time = prompt("Введите дату в формате YYYY-MM-DD", "2018-12-11");
 
-let persone = {
-    name: "John",
-    age: 25,
-    isMarried: false
+
+let appData = {
+    money: money,
+    timeData: time,
+    expenses: [],
+    optionalExpenses: "",
+    income: [],
+    savings: false 
+};
+
+let i = 0;
+
+for(i = 0; i < 2; i++) {
+
+    let expensesData = {
+        subject: prompt("Введите обязательную статью расходов в этом месяце", "Статья №" + (i + 1)),
+        money: prompt("Во сколько обойдется?", (i + 1) * 10)
+    };
+
+    appData.expenses[i] = expensesData;
 }
 
-console.log(persone.name);
+console.log(appData);
 
-console.log(persone["age"]);
+alert(appData.money / 30);
 
-console.log(persone);
+// var string = `Hello
+// !`;
 
-let arr = ['plum.png', 'orange.jpg', 'apple.bmp'];
+// console.log(string);
 
-console.log(arr);
+// let persone = {
+//     name: "John",
+//     age: 25,
+//     isMarried: false
+// }
 
-console.log(arr[3]);
+// console.log(persone.name);
 
-//alert("Hello World!");
+// console.log(persone["age"]);
 
-// let answer = confirm("Are you here?");
-// console.log(answer);
+// console.log(persone);
 
-let answer = promt("Do you have any many?", "Да");
-console.log(answer);
+// let arr = ['plum.png', 'orange.jpg', 'apple.bmp'];
+
+// console.log(arr);
+
+// console.log(arr[3]);
+
+// //alert("Hello World!");
+
+// // let answer = confirm("Are you here?");
+// // console.log(answer);
+
+//let answer = promt("Do you have any many?", "Да");
+//console.log(answer);
